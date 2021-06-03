@@ -1,0 +1,69 @@
+@use "../config/variables" as var;
+@use "../functions/rem" as *;
+
+@mixin from($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+@mixin to($size) {
+  @media screen and (max-width: $size - 1) {
+    @content;
+  }
+}
+
+@mixin wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  @include to(var.$mobile) {
+    max-width: calc(100% - 3rem);
+  }
+  @include from(var.$mobile) {
+    max-width: 327px;
+  }
+  @include from(var.$tablet) {
+    max-width: 720px;
+  }
+  @include from(var.$desktop) {
+    max-width: 1110px;
+  }
+}
+
+@mixin noLink {
+  text-decoration: none;
+  color: inherit;
+}
+@mixin noList {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+@mixin button($type: "light") {
+  display: inline-block;
+  padding: rem(9px) rem(25px);
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+  @if $type == "light" {
+    border: 2px solid var.$white;
+    color: var.$lightGray;
+  }
+  @if $type == "dark" {
+    border: 2px solid var.$darkBlue;
+    color: var.$darkBlue;
+  }
+  &:hover {
+    @if $type == "light" {
+      background-color: var.$white;
+      color: var.$darkBlue;
+    }
+    @if $type == "dark" {
+      background-color: var.$darkBlue;
+      color: var.$white;
+    }
+  }
+}

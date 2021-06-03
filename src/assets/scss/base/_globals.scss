@@ -1,0 +1,32 @@
+@use "../config/variables" as var;
+@use "../mixins/mixins" as mix;
+@use "../functions/rem" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+}
+
+html {
+  font-size: var.$fontSizeDefault;
+}
+
+body {
+  font-family: var.$fontBody;
+  background-color: var.$white;
+}
+
+main {
+  margin-top: rem(140px);
+  @include mix.from(var.$desktop) {
+    margin-top: rem(305px);
+  }
+}
+
+img {
+  vertical-align: top;
+}

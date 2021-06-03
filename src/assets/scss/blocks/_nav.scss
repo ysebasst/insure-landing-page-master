@@ -1,0 +1,100 @@
+@use "../config/variables" as var;
+@use "../mixins/mixins" as mix;
+@use "../functions/rem" as *;
+
+.nav {
+  position: relative;
+  background-color: var.$white;
+  &__container {
+    @include mix.wrapper;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: rem(80px);
+  }
+  &__toggle {
+    @include mix.to(var.$desktop) {
+      cursor: pointer;
+      outline: 0;
+      &::before {
+        content: url(../images/icon-hamburger.svg);
+      }
+      &--icon-close {
+        content: url(../images/icon-close.svg);
+      }
+    }
+  }
+  &__menu {
+    @include mix.noList;
+    @include mix.to(var.$desktop) {
+      z-index: 10;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      min-height: calc(100vh - 80px);
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      background-color: var.$darkBlue;
+      background-image: url("../images/bg-pattern-mobile-nav.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: left bottom;
+      transform: scale(1, 0);
+      transition: transform 0.3s, visibility 0.3s;
+      transform-origin: top;
+      visibility: hidden;
+      &--show {
+        transform: scale(1, 1);
+        visibility: visible;
+      }
+    }
+    @include mix.from(var.$desktop) {
+      display: flex;
+    }
+  }
+  &__item {
+    @include mix.from(var.$desktop) {
+      &:last-of-type {
+        margin-left: 1.25rem;
+      }
+    }
+  }
+  &__link {
+    @include mix.noLink;
+    text-transform: uppercase;
+    @include mix.to(var.$desktop) {
+      display: block;
+      padding: 1rem 0.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var.$lightGray;
+    }
+    @include mix.from(var.$desktop) {
+      display: flex;
+      align-items: center;
+      padding: 0 0.75rem;
+      height: 100%;
+      color: var.$gray;
+      transition: color 0.3s;
+      &:hover {
+        color: var.$darkBlue;
+      }
+    }
+  }
+  &__button {
+    @include mix.noLink;
+    @include mix.button();
+    @include mix.to(var.$desktop) {
+      display: block;
+      padding: rem(14px) 0.5rem;
+      font-size: 1.25rem;
+    }
+    @include mix.from(var.$desktop) {
+      @include mix.button("dark");
+    }
+  }
+}

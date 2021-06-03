@@ -1,0 +1,23 @@
+header.header
+  nav.nav 
+    .nav__container 
+      a.nav__brand(href="#") 
+        img.nav__logo(src="./assets/images/logo.svg", alt="logo insure")
+      span#btn-toggle-menu.nav__toggle(role="button" aria-label="toggle") 
+      ul#nav-menu.nav__menu
+        li.nav__item: a.nav__link(href="#") How we work
+        li.nav__item: a.nav__link(href="#") Blog
+        li.nav__item: a.nav__link(href="#") Account
+        li.nav__item: a.nav__button(href="#") View plans
+  .hero
+    .hero__container
+      picture.hero__picture
+        source(srcset="./assets/images/image-intro-desktop.jpg" media="(min-width: 768px)")
+        img.hero__image(srcset="./assets/images/image-intro-mobile.jpg" alt="image intro")
+      .hero__info
+        h1.hero__title Humanizing your insurance.
+        p.hero__paragraph.
+          Get your life insurance coverage easier and faster. We blend our expertise
+          and technology to help you find the plan that’s right for you. Ensure you
+          and your loved ones are protected.
+        a.hero__button(href="#") View plans
