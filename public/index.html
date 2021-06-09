@@ -26,7 +26,7 @@
       <div class="hero">
         <div class="hero__container">
           <picture class="hero__picture">
-            <source srcset="./assets/images/image-intro-desktop.jpg" media="(min-width: 768px)"><img class="hero__image" srcset="./assets/images/image-intro-mobile.jpg" alt="image intro">
+            <source srcset="./assets/images/image-intro-desktop.jpg" media="(min-width: 768px)"><img class="hero__image" src="./assets/images/image-intro-mobile.jpg" alt="image intro">
           </picture>
           <div class="hero__info">
             <h1 class="hero__title">Humanizing your insurance.</h1>
@@ -43,77 +43,81 @@
       <section class="different"> 
         <div class="different__container">
           <h2 class="different__title">We’re different</h2>
-          <article class="different-article"><img class="different__icon" src="./assets/images/icon-snappy-process.svg" alt="icon snappy">
-            <h3 class="different-article__title">Snappy Process</h3>
-            <p class="different-article__paragraph">
-              Our application process can be completed in minutes, not hours. Don’t get
-              stuck filling in tedious forms.
-            </p>
-          </article>
-          <article class="different-article"><img class="different__icon" src="./assets/images/icon-affordable-prices.svg" alt="icon affordable">
-            <h3 class="different-article__title">Affordable Prices</h3>
-            <p class="different-article__paragraph">
-              We don’t want you worrying about high monthly costs. Our prices may be
-              low, but we still offer the best coverage possible.
-            </p>
-          </article>
-          <article class="different-article"><img class="different__icon" src="./assets/images/icon-people-first.svg" alt="icon people">
-            <h3 class="different-article__title">People First</h3>
-            <p class="different-article__paragraph">
-              Our plans aren’t full of conditions and clauses to prevent payouts. We
-              make sure you’re covered when you need it.
-            </p>
-          </article>
+          <div class="different__articles">
+            <article class="different-article"><img class="different-article__icon" src="./assets/images/icon-snappy-process.svg" alt="icon snappy">
+              <h3 class="different-article__title">Snappy Process</h3>
+              <p class="different-article__paragraph">
+                Our application process can be completed in minutes, not hours. Don’t get
+                stuck filling in tedious forms.
+              </p>
+            </article>
+            <article class="different-article"><img class="different-article__icon" src="./assets/images/icon-affordable-prices.svg" alt="icon affordable">
+              <h3 class="different-article__title">Affordable Prices</h3>
+              <p class="different-article__paragraph">
+                We don’t want you worrying about high monthly costs. Our prices may be
+                low, but we still offer the best coverage possible.
+              </p>
+            </article>
+            <article class="different-article"><img class="different-article__icon" src="./assets/images/icon-people-first.svg" alt="icon people">
+              <h3 class="different-article__title">People First</h3>
+              <p class="different-article__paragraph">
+                Our plans aren’t full of conditions and clauses to prevent payouts. We
+                make sure you’re covered when you need it.
+              </p>
+            </article>
+          </div>
         </div>
-        <section class="find">
-          <h2 class="find__title">Find out more about how we work</h2><a class="find__button" href="#">How we work</a>
-        </section>
+      </section>
+      <section class="find">
+        <h2 class="find__title">Find out more about how we work</h2><a class="find__button" href="#">How we work</a>
       </section>
     </main>
-    <footer class="footer"> 
-      <div class="footer__header"> <img class="footer__logo" src="./assets/images/logo.svg" alt="logo insure">
-        <ul class="icons">
-          <li class="icons__item"><img class="icons__image" src="./assets/images/icon-facebook.svg" alt="icon facebook"></li>
-          <li class="icons__item"><img class="icons__image" src="./assets/images/icon-twitter.svg" alt="icon twitter"></li>
-          <li class="icons__item"><img class="icons__image" src="./assets/images/icon-pinterest.svg" alt="icon pinterest"></li>
-          <li class="icons__item"><img class="icons__image" src="./assets/images/icon-instagram.svg" alt="icon instagram"></li>
-        </ul>
-      </div>
-      <div class="footer__body"> 
-        <ul class="footer__menu">
-          <li class="footer__item"> <a class="footer__link" href="#">Our company</a>
-            <ul class="footer__sub-menu">
-              <li class="footer__sub-item"><a class="footer__sub-link" href="#">How we work</a></li>
-              <li class="footer__sub-item"><a class="footer__sub-link" href="#">Why Insure?</a></li>
-              <li class="footer__sub-item"><a class="footer__sub-link" href="#">View plans</a></li>
-              <li class="footer__sub-item"><a class="footer__sub-link" href="#">Reviews</a></li>
-            </ul>
-          </li>
-          <li class="footer__item"> <a class="footer__link" href="#">Help me</a>
-            <ul class="footer__sub-menu">
-              <li class="footer__sub-item"><a class="footer__sub-link" href="#">FAQ</a></li>
-              <li class="footer__sub-item"><a class="footer__sub-link" href="#">Terms of use</a></li>
-              <li class="footer__sub-item"><a class="footer__sub-link" href="#">Privacy policy</a></li>
-              <li class="footer__sub-item"><a class="footer__sub-link" href="#">Cookies</a></li>
-            </ul>
-          </li>
-          <li class="footer__item"> <a class="footer__link" href="#">Contact</a>
-            <ul class="footer__sub-menu">
-              <li class="footer__sub-item"><a class="footer__sub-link" href="#">Sales</a></li>
-              <li class="footer__sub-item"><a class="footer__sub-link" href="#">Support</a></li>
-              <li class="footer__sub-item"><a class="footer__sub-link" href="#">Live chat</a></li>
-            </ul>
-          </li>
-          <li class="footer__item"> <a class="footer__link" href="#">Others</a>
-            <ul class="footer__sub-menu">
-              <li class="footer__sub-item"><a class="footer__sub-link" href="#">Careers</a></li>
-              <li class="footer__sub-item"><a class="footer__sub-link" href="#">Press</a></li>
-              <li class="footer__sub-item"><a class="footer__sub-link" href="#">Licenses</a></li>
-            </ul>
-          </li>
-        </ul>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__top"> <img class="footer__logo" src="./assets/images/logo.svg" alt="logo insure">
+          <ul class="footer-icons">
+            <li class="footer-icons__item"><a class="footer-icons__link" href="#"> <img class="footer-icons__image" src="./assets/images/icon-facebook.svg" alt="icon facebook"></a></li>
+            <li class="footer-icons__item"><a class="footer-icons__link" href="#"> <img class="footer-icons__image" src="./assets/images/icon-twitter.svg" alt="icon twitter"></a></li>
+            <li class="footer-icons__item"><a class="footer-icons__link" href="#"> <img class="footer-icons__image" src="./assets/images/icon-pinterest.svg" alt="icon pinterest"></a></li>
+            <li class="footer-icons__item"><a class="footer-icons__link" href="#"> <img class="footer-icons__image" src="./assets/images/icon-instagram.svg" alt="icon instagram"></a></li>
+          </ul>
+        </div>
+        <div class="footer__bottom"> 
+          <ul class="footer-menu">
+            <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Our company</a>
+              <ul class="footer-menu__sub-menu">
+                <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="#">How we work</a></li>
+                <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="#">Why Insure?</a></li>
+                <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="#">View plans</a></li>
+                <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="#">Reviews</a></li>
+              </ul>
+            </li>
+            <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Help me</a>
+              <ul class="footer-menu__sub-menu">
+                <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="#">FAQ</a></li>
+                <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="#">Terms of use</a></li>
+                <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="#">Privacy policy</a></li>
+                <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="#">Cookies</a></li>
+              </ul>
+            </li>
+            <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Contact</a>
+              <ul class="footer-menu__sub-menu">
+                <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="#">Sales</a></li>
+                <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="#">Support</a></li>
+                <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="#">Live chat</a></li>
+              </ul>
+            </li>
+            <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Others</a>
+              <ul class="footer-menu__sub-menu">
+                <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="#">Careers</a></li>
+                <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="#">Press</a></li>
+                <li class="footer-menu__sub-item"><a class="footer-menu__sub-link" href="#">Licenses</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
-    <script src="./script.js"> </script>
+    <script src="./assets/js/script.js"> </script>
   </body>
 </html>
